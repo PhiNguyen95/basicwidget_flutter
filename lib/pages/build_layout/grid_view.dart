@@ -10,7 +10,7 @@ class BuildGridView extends StatelessWidget {
       crossAxisCount: 2,
       padding: const EdgeInsets.all(16.0),
       childAspectRatio: 8.0 / 9.0,
-      children: BuildCard.buildCards(),
+      children: BuildCard.buildGridCards(),
     );
   }
 }

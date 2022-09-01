@@ -6,7 +6,14 @@ class BuildColumnLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: const Text('Column'),
+        child: Column(
+          children: [
+            const Text('Column'),
+            const Text('Column'),
+            const Text('Column'),
+            const Text('Column'),
+          ],
+        ),
     );
   }
 }

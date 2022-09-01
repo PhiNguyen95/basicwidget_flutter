@@ -6,7 +6,14 @@ class BuildRowLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: const Text('Row'),
+        child: Row(
+          children: [
+            const Text('Row'),
+            const Text('Row'),
+            const Text('Row'),
+            const Text('Row'),
+          ],
+        ),
     );
   }
 }
