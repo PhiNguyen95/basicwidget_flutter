@@ -34,6 +34,10 @@ class _HomePageState extends State<HomePage> {
             label: 'List View',
           ),
           BottomNavigationBarItem(
+            icon: Icon(Icons.list),
+            label: 'List View Builder',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.view_column),
             label: 'Column',
           ),
@@ -61,8 +65,10 @@ class _HomePageState extends State<HomePage> {
     case 1:
       return BuildListViewLayout();
     case 2:
-      return BuildColumnLayout();
+      return BuildListViewBuilderLayout();
     case 3:
+      return BuildColumnLayout();
+    case 4:
       return BuildRowLayout();
     default:
       return BuildGridView();

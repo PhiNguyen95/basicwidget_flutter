@@ -1,3 +1,4 @@
+import 'package:base_project/pages/build_layout/name_card.dart';
 import 'package:flutter/material.dart';
 
 class BuildRowLayout extends StatelessWidget {
@@ -5,15 +6,20 @@ class BuildRowLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Row(
-          children: [
-            const Text('Row'),
-            const Text('Row'),
-            const Text('Row'),
-            const Text('Row'),
-          ],
-        ),
-    );
+    return LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints viewportConstraints) {
+          return SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                  minHeight: viewportConstraints.minHeight,),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: BuildCard.buildListCards(),
+              ),
+            ),
+          );
+        });
   }
 }
