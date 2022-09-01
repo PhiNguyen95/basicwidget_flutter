@@ -1,4 +1,6 @@
+import 'package:base_project/pages/first_screen.dart';
 import 'package:base_project/pages/home.dart';
+import 'package:base_project/pages/second_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,8 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      routes: {
+        '/home': (context) => const HomePage(),
+        '/first': (context) => const FirstScreen(),
+        '/second':(context) => const SecondScreen(),
+      },
+      initialRoute: '/home',
     );
   }
 }
-

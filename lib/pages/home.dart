@@ -53,6 +53,14 @@ class _HomePageState extends State<HomePage> {
           });
         },
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.pushNamed(context, '/first');
+        },
+        label: const Text('Page 1'),
+        icon: const Icon(Icons.navigate_next),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
       resizeToAvoidBottomInset: false,
     );
   }
